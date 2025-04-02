@@ -1,0 +1,9 @@
+appId: com.davilte.tafaltando
+---
+# Abrir app
+- launchApp
+
+- tapOn:
+    id: button-logout
+
+- assertVisible: "Entrar"
