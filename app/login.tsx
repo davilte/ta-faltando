@@ -4,7 +4,7 @@ import { Container } from '~/components/Container';
 import { Button } from '~/components/Button';
 import { useAuthStore } from "~/store/auth";
 import { useForm, Controller } from 'react-hook-form'
-import { Image } from 'expo-image';
+import { DoodleUnderline } from '~/components/DoodleUnderline';
 
 type LoginFormInputs = {
     email: string;
@@ -66,16 +66,7 @@ export default function LoginScreen() {
                                                 className='doodle text-4xl w-full'
                                                 testID="input-email"
                                             />
-                                            <Image
-                                                source={require('~/assets/images/underline.png')}
-                                                contentFit="contain"
-                                                style={{
-                                                    height: 5,
-                                                    width: '100%',
-                                                    marginBottom: 16,
-                                                    marginTop: -5
-                                                }}
-                                            />
+                                            <DoodleUnderline />
                                         </>
                                     )}
                                     name="email"
@@ -98,16 +89,7 @@ export default function LoginScreen() {
                                                 className='doodle text-4xl w-full'
                                                 testID="input-password"
                                             />
-                                            <Image
-                                                source={require('~/assets/images/underline.png')}
-                                                contentFit="contain"
-                                                style={{
-                                                    height: 5,
-                                                    width: '100%',
-                                                    marginBottom: 16,
-                                                    marginTop: -5
-                                                }}
-                                            />
+                                            <DoodleUnderline />
                                         </>
                                     )}
                                     name="password"
@@ -126,16 +108,7 @@ export default function LoginScreen() {
                         </ImageBackground>
                         <View className='items-center w-full '>
                             <Text className='text-2xl doodle w-full text-center'>Cadastrar-se</Text>
-                            <Image
-                                source={require('~/assets/images/underline.png')}
-                                contentFit="contain"
-                                style={{
-                                    height: 5,
-                                    width: '30%',
-                                    marginBottom: 16,
-                                    marginTop: -5
-                                }}
-                            />
+                            <DoodleUnderline style={{width: '30%'}} />
                             <Text className='doodle text-xl w-full text-center'>ou</Text>
                             <Text className='text-2xl doodle w-full text-center'>Entrar sem cadastro</Text>
                         </View>
