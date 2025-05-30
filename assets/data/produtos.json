@@ -1,0 +1,61 @@
+[
+    { "categoria": "Hortifruti", "nome": "Maçã Fuji", "imagem": "teste.png" },
+    { "categoria": "Hortifruti", "nome": "Banana Prata", "imagem": "teste.png" },
+    { "categoria": "Hortifruti", "nome": "Alface Crespa", "imagem": "teste.png" },
+    { "categoria": "Hortifruti", "nome": "Cenoura", "imagem": "teste.png" },
+    { "categoria": "Hortifruti", "nome": "Tomate Italiano", "imagem": "teste.png" },
+  
+    { "categoria": "Carnes e peixes", "nome": "Filé de frango", "imagem": "teste.png" },
+    { "categoria": "Carnes e peixes", "nome": "Costela bovina", "imagem": "teste.png" },
+    { "categoria": "Carnes e peixes", "nome": "Filé de salmão", "imagem": "teste.png" },
+    { "categoria": "Carnes e peixes", "nome": "Linguiça toscana", "imagem": "teste.png" },
+    { "categoria": "Carnes e peixes", "nome": "Tilápia em filé", "imagem": "teste.png" },
+  
+    { "categoria": "Padaria", "nome": "Pão francês", "imagem": "teste.png" },
+    { "categoria": "Padaria", "nome": "Croissant", "imagem": "teste.png" },
+    { "categoria": "Padaria", "nome": "Pão de forma integral", "imagem": "teste.png" },
+    { "categoria": "Padaria", "nome": "Bolo de chocolate", "imagem": "teste.png" },
+    { "categoria": "Padaria", "nome": "Rosquinha de coco", "imagem": "teste.png" },
+  
+    { "categoria": "Frios e Laticínios", "nome": "Queijo muçarela", "imagem": "teste.png" },
+    { "categoria": "Frios e Laticínios", "nome": "Presunto cozido", "imagem": "teste.png" },
+    { "categoria": "Frios e Laticínios", "nome": "Iogurte natural", "imagem": "teste.png" },
+    { "categoria": "Frios e Laticínios", "nome": "Leite integral", "imagem": "teste.png" },
+    { "categoria": "Frios e Laticínios", "nome": "Requeijão cremoso", "imagem": "teste.png" },
+  
+    { "categoria": "Congelados", "nome": "Lasanha congelada", "imagem": "teste.png" },
+    { "categoria": "Congelados", "nome": "Pizza de calabresa", "imagem": "teste.png" },
+    { "categoria": "Congelados", "nome": "Hambúrguer bovino", "imagem": "teste.png" },
+    { "categoria": "Congelados", "nome": "Vegetais congelados", "imagem": "teste.png" },
+    { "categoria": "Congelados", "nome": "Sorvete de creme", "imagem": "teste.png" },
+  
+    { "categoria": "Mercearia", "nome": "Arroz branco", "imagem": "teste.png" },
+    { "categoria": "Mercearia", "nome": "Feijão carioca", "imagem": "teste.png" },
+    { "categoria": "Mercearia", "nome": "Macarrão espaguete", "imagem": "teste.png" },
+    { "categoria": "Mercearia", "nome": "Óleo de soja", "imagem": "teste.png" },
+    { "categoria": "Mercearia", "nome": "Açúcar refinado", "imagem": "teste.png" },
+  
+    { "categoria": "Doces e Biscoitos", "nome": "Chocolate ao leite", "imagem": "teste.png" },
+    { "categoria": "Doces e Biscoitos", "nome": "Biscoito recheado", "imagem": "teste.png" },
+    { "categoria": "Doces e Biscoitos", "nome": "Bala de goma", "imagem": "teste.png" },
+    { "categoria": "Doces e Biscoitos", "nome": "Amendoim doce", "imagem": "teste.png" },
+    { "categoria": "Doces e Biscoitos", "nome": "Waffer de morango", "imagem": "teste.png" },
+  
+    { "categoria": "Bebidas", "nome": "Refrigerante cola", "imagem": "teste.png" },
+    { "categoria": "Bebidas", "nome": "Suco de laranja", "imagem": "teste.png" },
+    { "categoria": "Bebidas", "nome": "Cerveja Pilsen", "imagem": "teste.png" },
+    { "categoria": "Bebidas", "nome": "Água mineral", "imagem": "teste.png" },
+    { "categoria": "Bebidas", "nome": "Energético", "imagem": "teste.png" },
+  
+    { "categoria": "Higiene", "nome": "Sabonete", "imagem": "teste.png" },
+    { "categoria": "Higiene", "nome": "Shampoo", "imagem": "teste.png" },
+    { "categoria": "Higiene", "nome": "Desodorante aerosol", "imagem": "teste.png" },
+    { "categoria": "Higiene", "nome": "Papel higiênico", "imagem": "teste.png" },
+    { "categoria": "Higiene", "nome": "Creme dental", "imagem": "teste.png" },
+  
+    { "categoria": "Limpeza", "nome": "Detergente líquido", "imagem": "teste.png" },
+    { "categoria": "Limpeza", "nome": "Sabão em pó", "imagem": "teste.png" },
+    { "categoria": "Limpeza", "nome": "Desinfetante", "imagem": "teste.png" },
+    { "categoria": "Limpeza", "nome": "Esponja multiuso", "imagem": "teste.png" },
+    { "categoria": "Limpeza", "nome": "Água sanitária", "imagem": "teste.png" }
+  ]
