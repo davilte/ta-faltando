@@ -5,6 +5,8 @@ import { Button } from '~/components/Button';
 import { useAuthStore } from "~/store/auth";
 import { useForm, Controller } from 'react-hook-form'
 import { DoodleUnderline } from '~/components/DoodleUnderline';
+import { Postit } from '~/components/Postit';
+
 
 type LoginFormInputs = {
     email: string;
@@ -45,11 +47,7 @@ export default function LoginScreen() {
                         <View className='w-full'>
                             <Text className='text-5xl text-center doodle'>Tá Faltando!</Text>
                         </View>
-                        <ImageBackground
-                            source={require('~/assets/images/postit1.png')}
-                            className="w-full aspect-[1]"
-                            resizeMode="cover"
-                        >
+                        <Postit className='w-full'>
                             <View className='flex-1 justify-center items-start p-16'>
                                 <Controller
                                     control={control}
@@ -105,7 +103,7 @@ export default function LoginScreen() {
                                     </TouchableOpacity>
                                 </ImageBackground>
                             </View>
-                        </ImageBackground>
+                        </Postit>
                         <View className='items-center w-full '>
                             <Text className='text-2xl doodle w-full text-center'>Cadastrar-se</Text>
                             <DoodleUnderline style={{width: '30%'}} />

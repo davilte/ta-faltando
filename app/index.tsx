@@ -2,13 +2,17 @@ import { Stack, Link } from 'expo-router';
 import { Button } from '~/components/Button';
 import { Container } from '~/components/Container';
 import { useAuthStore } from "~/store/auth";
-import { View, Text, TouchableOpacity, ImageBackground } from "react-native";
+import { View, Text, TouchableOpacity, ImageBackground, ActivityIndicator, FlatList } from "react-native";
 import { Image } from 'expo-image';
 import { NotebookBackground } from '~/components/NotebookBackground';
 import { DoodleUnderline } from '~/components/DoodleUnderline';
 import { DoodleDate } from '~/components/DoodleDate';
 import { DoodleMarker } from '~/components/DoodleMarker';
-
+import { Postit } from '~/components/Postit';
+import { getLists } from "../services/listsService";
+import { ListaDeCompras } from "../types";
+import { useEffect, useState } from 'react';
+import { FlashList } from '@shopify/flash-list';
 
 export default function Home() {
   const logout = useAuthStore((state) => state.logout);
@@ -16,10 +20,23 @@ export default function Home() {
     logout();
   };
 
-  const hoje = new Date();
-  const dia = hoje.getDate().toString().padStart(2, '0');
-  const mes = (hoje.getMonth() + 1).toString().padStart(2, '0'); // meses são 0-indexados
-  const ano = hoje.getFullYear().toString();
+  const [lists, setLists] = useState<ListaDeCompras[] | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchLists = async () => {
+      try {
+        const data = await getLists();
+        setLists(data);
+      } catch (error) {
+        console.error("Erro ao carregar listas:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchLists();
+  }, []);
 
   return (
     <>
@@ -56,9 +73,79 @@ export default function Home() {
               <DoodleMarker><Text className='doodle text-center text-4xl w-full'>Lista Atual</Text></DoodleMarker>
             </TouchableOpacity>
           </ImageBackground>
-
-
         </View>
+
+        {lists?.length == 0 ? (
+          <Text>Sem listas anteriores. Clique no carrinho para começar uma nova ou continuar a Lista Atual</Text>)
+          :
+          (<></>)}
+
+
+        {loading ? (
+          <View>
+            <ActivityIndicator size="large" />
+          </View>
+        ) : (
+
+          <FlashList
+              data={lists}
+              renderItem={({ item }) => <Text>{item.data}</Text>}
+            />
+
+          // <View>
+
+          //   <View className='flex-row items-center my-8'>
+          //     <Text className='text-xl'>Fevereiro</Text>
+          //     <View className='border-b flex-1 ms-4'></View>
+          //   </View>
+
+          //   <View className='flex-row flex-wrap justify-around'>
+          //     <View>
+          //       <Postit className='max-w-48'>
+          //         <View className='overflow-hidden h-full w-full'>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //           <Text>ola</Text>
+          //         </View>
+          //       </Postit>
+          //     </View>
+          //     <View>
+          //       <Postit className='max-w-48'>
+          //         <View className='overflow-hidden h-full w-full'>
+          //           <Text>xau</Text>
+          //           <Text>xau</Text>
+          //           <Text>xau</Text>
+          //           <Text>xau</Text>
+          //           <Text>xau</Text>
+          //           <Text>xau</Text>
+          //           <Text>xau</Text>
+          //           <Text>xau</Text>
+          //           <Text>xau</Text>
+          //           <Text>xau</Text>
+          //           <Text>xau</Text>
+          //           <Text>xau</Text>
+          //         </View>
+          //       </Postit>
+          //     </View>
+          //   </View>
+          // </View>
+        )
+        }
+
+
       </Container>
     </>
   );
