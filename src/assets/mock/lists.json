@@ -1,0 +1,667 @@
+[
+  {
+    "data": "2025-05-27",
+    "mercado": "Supermercado Bom Pre\u00e7o",
+    "concluida": false,
+    "produtos": [
+      {
+        "nome": "Lingui\u00e7a toscana",
+        "categoria": "Carnes e peixes",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 27
+      },
+      {
+        "nome": "Costela bovina",
+        "categoria": "Carnes e peixes",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 12
+      },
+      {
+        "nome": "Creme dental",
+        "categoria": "Higiene",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 13
+      },
+      {
+        "id": 29,
+        "nome": "Ma\u00e7\u00e3 Fuji",
+        "categoria": "Hortifruti",
+        "imagem": "teste.png",
+        "checked": true
+      },
+      {
+        "nome": "P\u00e3o de forma integral",
+        "categoria": "Padaria",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 33
+      },
+      {
+        "nome": "Fil\u00e9 de salm\u00e3o",
+        "categoria": "Carnes e peixes",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 22
+      },
+      {
+        "nome": "Iogurte natural",
+        "categoria": "Frios e Latic\u00ednios",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 24
+      },
+      {
+        "nome": "Biscoito recheado",
+        "categoria": "Doces e Biscoitos",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 7
+      },
+      {
+        "nome": "Arroz branco",
+        "categoria": "Mercearia",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 3
+      },
+      {
+        "nome": "Sorvete de creme",
+        "categoria": "Congelados",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 42
+      },
+      {
+        "id": 34,
+        "nome": "P\u00e3o franc\u00eas",
+        "categoria": "Padaria",
+        "imagem": "teste.png",
+        "checked": true
+      },
+      {
+        "nome": "Esponja multiuso",
+        "categoria": "Limpeza",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 19
+      },
+      {
+        "nome": "Presunto cozido",
+        "categoria": "Frios e Latic\u00ednios",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 32
+      },
+      {
+        "nome": "Waffer de morango",
+        "categoria": "Doces e Biscoitos",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 47
+      },
+      {
+        "nome": "Suco de laranja",
+        "categoria": "Bebidas",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 43
+      }
+    ]
+  },
+  {
+    "data": "2025-05-20",
+    "mercado": "Atacad\u00e3o Central",
+    "concluida": true,
+    "produtos": [
+      {
+        "nome": "Desodorante aerosol",
+        "categoria": "Higiene",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 16
+      },
+      {
+        "id": 36,
+        "nome": "Refrigerante cola",
+        "categoria": "Bebidas",
+        "imagem": "teste.png",
+        "checked": true
+      },
+      {
+        "nome": "Sabonete",
+        "categoria": "Higiene",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 39
+      },
+      {
+        "nome": "Sab\u00e3o em p\u00f3",
+        "categoria": "Limpeza",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 40
+      },
+      {
+        "nome": "Esponja multiuso",
+        "categoria": "Limpeza",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 19
+      },
+      {
+        "nome": "Tomate Italiano",
+        "categoria": "Hortifruti",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 45
+      },
+      {
+        "nome": "Cenoura",
+        "categoria": "Hortifruti",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 9
+      },
+      {
+        "nome": "\u00d3leo de soja",
+        "categoria": "Mercearia",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 50
+      },
+      {
+        "nome": "\u00c1gua sanit\u00e1ria",
+        "categoria": "Limpeza",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 49
+      },
+      {
+        "nome": "\u00c1gua mineral",
+        "categoria": "Bebidas",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 48
+      },
+      {
+        "nome": "Lasanha congelada",
+        "categoria": "Congelados",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 25
+      },
+      {
+        "nome": "Fil\u00e9 de frango",
+        "categoria": "Carnes e peixes",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 21
+      }
+    ]
+  },
+  {
+    "data": "2025-05-12",
+    "mercado": "Mercado do Povo",
+    "concluida": true,
+    "produtos": [
+      {
+        "nome": "Pizza de calabresa",
+        "categoria": "Congelados",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 31
+      },
+      {
+        "nome": "Refrigerante cola",
+        "categoria": "Bebidas",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 36
+      },
+      {
+        "nome": "Leite integral",
+        "categoria": "Frios e Latic\u00ednios",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 26
+      },
+      {
+        "nome": "Banana Prata",
+        "categoria": "Hortifruti",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 6
+      },
+      {
+        "nome": "Bolo de chocolate",
+        "categoria": "Padaria",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 8
+      },
+      {
+        "nome": "Requeij\u00e3o cremoso",
+        "categoria": "Frios e Latic\u00ednios",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 37
+      },
+      {
+        "nome": "Lingui\u00e7a toscana",
+        "categoria": "Carnes e peixes",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 27
+      },
+      {
+        "id": 40,
+        "nome": "Sab\u00e3o em p\u00f3",
+        "categoria": "Limpeza",
+        "imagem": "teste.png",
+        "checked": true
+      },
+      {
+        "nome": "Lasanha congelada",
+        "categoria": "Congelados",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 25
+      },
+      {
+        "nome": "Alface Crespa",
+        "categoria": "Hortifruti",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 1
+      },
+      {
+        "nome": "Vegetais congelados",
+        "categoria": "Congelados",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 46
+      },
+      {
+        "nome": "A\u00e7\u00facar refinado",
+        "categoria": "Mercearia",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 4
+      },
+      {
+        "nome": "Bala de goma",
+        "categoria": "Doces e Biscoitos",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 5
+      },
+      {
+        "nome": "Ma\u00e7\u00e3 Fuji",
+        "categoria": "Hortifruti",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 29
+      },
+      {
+        "nome": "Desinfetante",
+        "categoria": "Limpeza",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 15
+      },
+      {
+        "nome": "Til\u00e1pia em fil\u00e9",
+        "categoria": "Carnes e peixes",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 44
+      },
+      {
+        "nome": "Rosquinha de coco",
+        "categoria": "Padaria",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 38
+      },
+      {
+        "nome": "Shampoo",
+        "categoria": "Higiene",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 41
+      }
+    ]
+  },
+  {
+    "data": "2025-05-03",
+    "mercado": "SuperNova",
+    "concluida": true,
+    "produtos": [
+      {
+        "nome": "Requeij\u00e3o cremoso",
+        "categoria": "Frios e Latic\u00ednios",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 37
+      },
+      {
+        "nome": "Vegetais congelados",
+        "categoria": "Congelados",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 46
+      },
+      {
+        "nome": "Croissant",
+        "categoria": "Padaria",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 14
+      },
+      {
+        "nome": "Cerveja Pilsen",
+        "categoria": "Bebidas",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 10
+      },
+      {
+        "nome": "\u00c1gua sanit\u00e1ria",
+        "categoria": "Limpeza",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 49
+      },
+      {
+        "nome": "Biscoito recheado",
+        "categoria": "Doces e Biscoitos",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 7
+      },
+      {
+        "nome": "Iogurte natural",
+        "categoria": "Frios e Latic\u00ednios",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 24
+      },
+      {
+        "nome": "Arroz branco",
+        "categoria": "Mercearia",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 3
+      },
+      {
+        "nome": "Ma\u00e7\u00e3 Fuji",
+        "categoria": "Hortifruti",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 29
+      },
+      {
+        "nome": "Fil\u00e9 de frango",
+        "categoria": "Carnes e peixes",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 21
+      },
+      {
+        "nome": "Costela bovina",
+        "categoria": "Carnes e peixes",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 12
+      },
+      {
+        "id": 30,
+        "nome": "Papel higi\u00eanico",
+        "categoria": "Higiene",
+        "imagem": "teste.png",
+        "checked": true
+      },
+      {
+        "nome": "Sab\u00e3o em p\u00f3",
+        "categoria": "Limpeza",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 40
+      },
+      {
+        "id": 44,
+        "nome": "Til\u00e1pia em fil\u00e9",
+        "categoria": "Carnes e peixes",
+        "imagem": "teste.png",
+        "checked": true
+      },
+      {
+        "nome": "Bala de goma",
+        "categoria": "Doces e Biscoitos",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 5
+      },
+      {
+        "nome": "P\u00e3o de forma integral",
+        "categoria": "Padaria",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 33
+      },
+      {
+        "nome": "Macarr\u00e3o espaguete",
+        "categoria": "Mercearia",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 28
+      },
+      {
+        "nome": "Rosquinha de coco",
+        "categoria": "Padaria",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 38
+      }
+    ]
+  },
+  {
+    "data": "2025-04-26",
+    "mercado": "Hipermercado Mega",
+    "concluida": true,
+    "produtos": [
+      {
+        "nome": "Sab\u00e3o em p\u00f3",
+        "categoria": "Limpeza",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 40
+      },
+      {
+        "nome": "Lasanha congelada",
+        "categoria": "Congelados",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 25
+      },
+      {
+        "nome": "Arroz branco",
+        "categoria": "Mercearia",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 3
+      },
+      {
+        "nome": "Biscoito recheado",
+        "categoria": "Doces e Biscoitos",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 7
+      },
+      {
+        "nome": "Cerveja Pilsen",
+        "categoria": "Bebidas",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 10
+      },
+      {
+        "nome": "Fil\u00e9 de frango",
+        "categoria": "Carnes e peixes",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 21
+      },
+      {
+        "nome": "Refrigerante cola",
+        "categoria": "Bebidas",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 36
+      },
+      {
+        "nome": "A\u00e7\u00facar refinado",
+        "categoria": "Mercearia",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 4
+      },
+      {
+        "nome": "Hamb\u00farguer bovino",
+        "categoria": "Congelados",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 23
+      },
+      {
+        "nome": "Requeij\u00e3o cremoso",
+        "categoria": "Frios e Latic\u00ednios",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 37
+      },
+      {
+        "nome": "Waffer de morango",
+        "categoria": "Doces e Biscoitos",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 47
+      },
+      {
+        "nome": "\u00d3leo de soja",
+        "categoria": "Mercearia",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 50
+      },
+      {
+        "nome": "Sabonete",
+        "categoria": "Higiene",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 39
+      },
+      {
+        "nome": "Papel higi\u00eanico",
+        "categoria": "Higiene",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 30
+      },
+      {
+        "nome": "Queijo mu\u00e7arela",
+        "categoria": "Frios e Latic\u00ednios",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 35
+      }
+    ]
+  },
+  {
+    "data": "2025-02-19",
+    "mercado": "Mercad\u00e3o da Esquina",
+    "concluida": true,
+    "produtos": [
+      {
+        "nome": "Iogurte natural",
+        "categoria": "Frios e Latic\u00ednios",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 24
+      },
+      {
+        "nome": "Cenoura",
+        "categoria": "Hortifruti",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 9
+      },
+      {
+        "nome": "Leite integral",
+        "categoria": "Frios e Latic\u00ednios",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 26
+      },
+      {
+        "nome": "Waffer de morango",
+        "categoria": "Doces e Biscoitos",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 47
+      },
+      {
+        "nome": "Presunto cozido",
+        "categoria": "Frios e Latic\u00ednios",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 32
+      },
+      {
+        "nome": "Arroz branco",
+        "categoria": "Mercearia",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 3
+      },
+      {
+        "nome": "Detergente l\u00edquido",
+        "categoria": "Limpeza",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 17
+      },
+      {
+        "nome": "Creme dental",
+        "categoria": "Higiene",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 13
+      },
+      {
+        "nome": "Sabonete",
+        "categoria": "Higiene",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 39
+      },
+      {
+        "id": 7,
+        "nome": "Biscoito recheado",
+        "categoria": "Doces e Biscoitos",
+        "imagem": "teste.png",
+        "checked": true
+      },
+      {
+        "nome": "Tomate Italiano",
+        "categoria": "Hortifruti",
+        "imagem": "teste.png",
+        "checked": false,
+        "id": 45
+      }
+    ]
+  }
+]

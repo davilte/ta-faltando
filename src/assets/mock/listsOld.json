@@ -1,0 +1,79 @@
+[
+  {
+    "data": "2025-05-27",
+    "mercado": "Supermercado Bom Preço",
+    "concluida": false,
+    "produtos": [
+      { "id": 1, "nome": "Maçã Fuji", "categoria": "Hortifruti", "imagem": "teste.png", "checked": true },
+      { "id": 2, "nome": "Alface Crespa", "categoria": "Hortifruti", "imagem": "teste.png", "checked": true },
+      { "id": 3, "nome": "Filé de frango", "categoria": "Carnes e peixes", "imagem": "teste.png", "checked": false },
+      { "id": 4, "nome": "Pão francês", "categoria": "Padaria", "imagem": "teste.png", "checked": true },
+      { "id": 5, "nome": "Sabonete", "categoria": "Higiene", "imagem": "teste.png", "checked": false },
+      { "id": 6, "nome": "Detergente", "categoria": "Limpeza", "imagem": "teste.png", "checked": true },
+      { "id": 7, "nome": "Cerveja Pilsen", "categoria": "Bebidas", "imagem": "teste.png", "checked": true },
+      { "id": 8, "nome": "Chocolate meio amargo", "categoria": "Doces e Biscoitos", "imagem": "teste.png", "checked": false },
+      { "id": 9, "nome": "Queijo prato", "categoria": "Frios e Laticínios", "imagem": "teste.png", "checked": true },
+      { "id": 10, "nome": "Arroz integral", "categoria": "Mercearia", "imagem": "teste.png", "checked": true },
+      { "id": 11, "nome": "Feijão preto", "categoria": "Mercearia", "imagem": "teste.png", "checked": true },
+      { "id": 12, "nome": "Azeite de oliva", "categoria": "Mercearia", "imagem": "teste.png", "checked": false },
+      { "id": 13, "nome": "Iogurte grego", "categoria": "Frios e Laticínios", "imagem": "teste.png", "checked": true },
+      { "id": 14, "nome": "Papel toalha", "categoria": "Higiene", "imagem": "teste.png", "checked": true },
+      { "id": 15, "nome": "Biscoito de água e sal", "categoria": "Doces e Biscoitos", "imagem": "teste.png", "checked": true }
+    ]
+  },
+  {
+    "data": "2025-05-20",
+    "mercado": "Atacadão Central",
+    "concluida": true,
+    "produtos": [
+      { "id": 16, "nome": "Leite integral", "categoria": "Frios e Laticínios", "imagem": "teste.png", "checked": true },
+      { "id": 17, "nome": "Queijo muçarela", "categoria": "Frios e Laticínios", "imagem": "teste.png", "checked": true },
+      { "id": 18, "nome": "Refrigerante cola", "categoria": "Bebidas", "imagem": "teste.png", "checked": true },
+      { "id": 19, "nome": "Chocolate ao leite", "categoria": "Doces e Biscoitos", "imagem": "teste.png", "checked": false }
+    ]
+  },
+  {
+    "data": "2025-05-12",
+    "mercado": "Mercado do Povo",
+    "concluida": true,
+    "produtos": [
+      { "id": 20, "nome": "Arroz branco", "categoria": "Mercearia", "imagem": "teste.png", "checked": true },
+      { "id": 21, "nome": "Feijão carioca", "categoria": "Mercearia", "imagem": "teste.png", "checked": true },
+      { "id": 22, "nome": "Óleo de soja", "categoria": "Mercearia", "imagem": "teste.png", "checked": false },
+      { "id": 23, "nome": "Sabão em pó", "categoria": "Limpeza", "imagem": "teste.png", "checked": true }
+    ]
+  },
+  {
+    "data": "2025-05-03",
+    "mercado": "SuperNova",
+    "concluida": true,
+    "produtos": [
+      { "id": 24, "nome": "Tilápia em filé", "categoria": "Carnes e peixes", "imagem": "teste.png", "checked": true },
+      { "id": 25, "nome": "Pizza de calabresa", "categoria": "Congelados", "imagem": "teste.png", "checked": true },
+      { "id": 26, "nome": "Desinfetante", "categoria": "Limpeza", "imagem": "teste.png", "checked": true },
+      { "id": 27, "nome": "Papel higiênico", "categoria": "Higiene", "imagem": "teste.png", "checked": true }
+    ]
+  },
+  {
+    "data": "2025-04-26",
+    "mercado": "Hipermercado Mega",
+    "concluida": true,
+    "produtos": [
+      { "id": 28, "nome": "Banana prata", "categoria": "Hortifruti", "imagem": "teste.png", "checked": true },
+      { "id": 29, "nome": "Cenoura orgânica", "categoria": "Hortifruti", "imagem": "teste.png", "checked": true },
+      { "id": 30, "nome": "Bife de alcatra", "categoria": "Carnes e peixes", "imagem": "teste.png", "checked": false },
+      { "id": 31, "nome": "Iogurte natural", "categoria": "Frios e Laticínios", "imagem": "teste.png", "checked": true }
+    ]
+  },
+  {
+    "data": "2025-02-19",
+    "mercado": "Mercadão da Esquina",
+    "concluida": true,
+    "produtos": [
+      { "id": 32, "nome": "Pão de forma integral", "categoria": "Padaria", "imagem": "teste.png", "checked": true },
+      { "id": 33, "nome": "Manteiga sem sal", "categoria": "Frios e Laticínios", "imagem": "teste.png", "checked": true },
+      { "id": 34, "nome": "Suco de laranja natural", "categoria": "Bebidas", "imagem": "teste.png", "checked": false },
+      { "id": 35, "nome": "Biscoito recheado", "categoria": "Doces e Biscoitos", "imagem": "teste.png", "checked": true }
+    ]
+  }
+]

@@ -5,3 +5,15 @@
 .doodle {
     font-family: 'Caveat_400Regular'
 }
+
+.doodle-medium {
+    font-family: 'Caveat_500Medium'
+}
+
+.doodle-semi-bold {
+    font-family: 'Caveat_600SemiBold'
+}
+
+.doodle-bold {
+    font-family: 'Caveat_700Bold';
+}
