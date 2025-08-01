@@ -8,16 +8,32 @@ import { Header } from '~/src/components/Header';
 import { DoodleDate } from '~/src/components/DoodleDate';
 import { useEffect, useState } from 'react';
 import { GroupedProducts, Product } from '~/src/types';
-import { groupProductsByCategory } from '~/src/services/lists/currentListService';
+import { addItemToCurrentList, groupProductsByCategory } from '~/src/services/lists/currentListService';
 import { FlashList } from '@shopify/flash-list';
 import { DoodleMarker } from '~/src/components/DoodleMarker';
 import { DoodleCheckbox } from '~/src/components/DoodleCheckbox';
 import NotebookLine from '../components/NotebookLine';
 import useCurrentList from '../hooks/useCurrentList';
+import useProductAutocomplete from '../hooks/useProductAutocomplete';
+import { ScrollView } from "react-native";
 
 export default function CurrentList() {
 
-    const { data: groupedData, loading, categories, toggleItemChecked } = useCurrentList();
+    const { data: groupedData, loading, categories, toggleItemChecked, refetch } = useCurrentList();
+    const [query, setQuery] = useState("");
+    const [showResults, setShowResults] = useState(false);
+    const { filtered, filter } = useProductAutocomplete();
+
+    const handleSelect = async (product: Product) => {
+        try {
+            await addItemToCurrentList(product.id);
+            setQuery("");
+            setShowResults(false);
+            refetch();
+        } catch (err) {
+            console.warn("Erro ao adicionar produto");
+        }
+    };
 
     const item = (category: string) => {
         return (
@@ -30,7 +46,7 @@ export default function CurrentList() {
                 {groupedData[category].map((product: Product) => (
                     <NotebookLine key={product.id}>
                         <View className='flex-row items-center justify-between w-full'>
-                            <Text className='doodle-medium text-4xl'>{product.nome}</Text>
+                            <Text className='doodle-medium text-4xl'>{product.name}</Text>
                             <DoodleCheckbox
                                 checked={product.checked}
                                 onToggle={() => toggleItemChecked(product.id)}
@@ -77,16 +93,41 @@ export default function CurrentList() {
                                 item(category)
                             )}
                             ListFooterComponent={
-                                <NotebookLine>
-                                    <TextInput
-                                        className="py-2 doodle-medium text-3xl"
-                                        placeholder="Novo item"
-                                        value={('')}
-                                        onChangeText={(text) => console.log('typing...')}
-                                        onSubmitEditing={() => { console.log('Submit editing') }}
-                                        returnKeyType="done"
-                                    />
-                                </NotebookLine>
+                                <>
+                                    <NotebookLine>
+                                        <TextInput
+                                            className="py-2 doodle-medium text-3xl"
+                                            placeholder="Novo item"
+                                            value={query}
+                                            onChangeText={(text) => {
+                                                setQuery(text);
+                                                setShowResults(true);
+                                                filter(text);
+                                            }}
+                                            onFocus={() => setShowResults(true)}
+                                            returnKeyType="done"
+                                        />
+                                    </NotebookLine>
+                                    {showResults && filtered.length > 0 && (
+                                        <ScrollView
+                                            className="bg-white p-2 rounded shadow-md max-h-60"
+                                            nestedScrollEnabled={true}
+                                        >
+                                            {filtered.map((product) => (
+                                                <TouchableOpacity
+                                                    key={product.id}
+                                                    onPress={() => handleSelect(product)}
+                                                    className="p-2 border-b border-gray-200"
+                                                >
+                                                    <Text className="doodle text-xl">
+                                                        {product.name} ({product.category})
+                                                    </Text>
+                                                </TouchableOpacity>
+                                            ))}
+                                        </ScrollView>
+                                    )}
+                                </>
+
                             }
                         />
                     </View>

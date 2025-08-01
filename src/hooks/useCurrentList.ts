@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { GroupedProducts } from "../types";
 import { groupProductsByCategory, checkItem } from "../services/lists/currentListService";
 
@@ -6,22 +6,27 @@ export default function useCurrentList() {
     const [groupedData, setGroupedData] = useState<GroupedProducts>({});
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        async function loadGrouped() {
-            setLoading(true);
-            const grouped = await groupProductsByCategory();
-            setGroupedData(grouped);
-            setLoading(false);
-        }
-        loadGrouped();
+    const loadGrouped = useCallback(async () => {
+        setLoading(true);
+        const grouped = await groupProductsByCategory();
+        setGroupedData(grouped);
+        setLoading(false);
     }, []);
+
+    useEffect(() => {
+        loadGrouped();
+    }, [loadGrouped]);
 
     const categories = Object.keys(groupedData);
 
-    const toggleItemChecked = (id: number) => {
-        checkItem(id);
-        setGroupedData({ ...groupedData });
-    }
+    const toggleItemChecked = async (id: number) => {
+        try {
+            await checkItem(id);
+            await loadGrouped();
+        } catch (err) {
+            console.warn("Failed to toggle item:", err);
+        }
+    };
 
-    return { data: groupedData, loading, categories, toggleItemChecked };
+    return { data: groupedData, loading, categories, toggleItemChecked, refetch: loadGrouped };
 }

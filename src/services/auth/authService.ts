@@ -1,8 +1,7 @@
 import { LoginDTO } from "~/src/types/auth";
-import { config } from '~/src/config';
 
 export async function loginRequest(data: LoginDTO) {
-    const response = await fetch(`${config.API_URL}/login`, {
+    const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}/login`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -17,5 +16,5 @@ export async function loginRequest(data: LoginDTO) {
 
     const result = await response.json();
     console.log("Login successful:", result);
-    return result; // e.g., { token: "..." }
+    return result;
 }

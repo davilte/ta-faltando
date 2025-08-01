@@ -1,39 +1,68 @@
-import listsMock from '../../assets/mock/lists.json';
-import type { ShoppingLists, GroupedProducts } from '../../types';
+// currentListService.ts
+import { storage } from "~/src/storage/mmkv";
+import type { GroupedProducts, Product } from "~/src/types";
 
-export const groupProductsByCategory = async (): Promise<GroupedProducts> => {
-  const lists: ShoppingLists[] = listsMock;
+// Fetch the current list from API
+export async function fetchCurrentList() {
+  const token = storage.getString("token");
 
-  if (!lists || lists.length === 0) return {};
+  const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}/lists/current`, {
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
+  });
 
-  const firstList = lists[0];
+  if (!response.ok) {
+    throw new Error("Failed to fetch current list");
+  }
+
+  const list = await response.json();
+  return list;
+}
+
+// Group items by category
+export async function groupProductsByCategory(): Promise<GroupedProducts> {
+  const list = await fetchCurrentList();
   const grouped: GroupedProducts = {};
 
-  firstList.produtos.forEach(product => {
-    const category = product.categoria;
+  list.items.forEach((product: Product) => {
+    const category = product.category;
     if (!grouped[category]) grouped[category] = [];
     grouped[category].push(product);
   });
 
-  // Simulate latency with setTimeout
-  return new Promise<GroupedProducts>(resolve => {
-    setTimeout(() => {
-      resolve(grouped);
-    }, 1000);
+  return grouped;
+}
+
+export async function addItemToCurrentList(productId: number) {
+  const token = storage.getString("token");
+  const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}/lists/current/${productId}`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    }
   });
-};
 
-export const checkItem = (id: number) => {
-  const lists: ShoppingLists[] = listsMock;
-  if (!lists || lists.length === 0) return;
+  if (!response.ok) throw new Error("Erro ao adicionar item");
 
-  const firstList = lists[0];
-  const product = firstList.produtos.find(p => p.id === id);
+  return response.json();
+}
 
-  if (product) {
-    product.checked = !product.checked; // Toggle checked status
-    console.log(`Product ${product.nome} checked status: ${product.checked}`);
-  } else {
-    console.log(`Product with id ${id} not found.`);
+export const checkItem = async (id: number) => {
+  const token = storage.getString("token");
+  const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}/lists/current/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    }
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message || "Failed to check item");
   }
+
+  return await response.json();
 };

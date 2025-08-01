@@ -10,7 +10,7 @@ import { DoodleMarker } from '~/src/components/DoodleMarker';
 import { Postit } from '~/src/components/Postit';
 import { FlashList } from '@shopify/flash-list';
 import { Header } from '~/src/components/Header';
-import useGroupByMonth from '../hooks/useGroupByMonth';
+import useCompletedLists from '../hooks/useCompletedLists';
 
 export default function Home() {
   const logout = useAuthStore((state) => state.logout);
@@ -19,7 +19,7 @@ export default function Home() {
   };
   const router = useRouter();
 
-  const { data: listsByMonth, loading } = useGroupByMonth()
+  const { data: listsByMonth, loading } = useCompletedLists()
   const user = useAuthStore((state) => state.user);
 
   return (
@@ -86,19 +86,19 @@ export default function Home() {
 
                   {/* Postit cards in a wrap layout */}
                   <View className="flex-row flex-wrap justify-start gap-4">
-                    {item.lists.map((lista, index) => (
+                    {item.lists.map((list, index) => (
                       <View key={index} className="w-[45%]">
                         <Postit className="w-full min-h-[150px] p-3">
                           <View className='flex-column justify-between h-full'>
                             <View>
-                              <Text className="doodle-semi-bold text-2xl mb-1">{lista.mercado}</Text>
-                              {lista.produtos.slice(0, 3).map((produto, i) => (
+                              <Text className="doodle-semi-bold text-2xl mb-1">{list.market}</Text>
+                              {list.items.slice(0, 3).map((produto, i) => (
                                 <Text key={i} className="doodle">
-                                  • {produto.nome}
+                                  • {produto.name}
                                 </Text>
                               ))}
                             </View>
-                            <Text className="text-xs doodle mb-2">{lista.data}</Text>
+                            <Text className="text-xs doodle mb-2">{new Date(list.date).toLocaleDateString("pt-BR")}</Text>
                           </View>
                         </Postit>
                       </View>

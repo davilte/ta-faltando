@@ -1,23 +1,25 @@
 export interface Product {
   id: number;
-  nome: string;
-  categoria: string;
-  imagem: string;
+  name: string;
+  category: string;
+  quantity: number;
   checked: boolean;
 }
 
-export interface ShoppingLists {
-  data: string;
-  mercado: string;
-  concluida: boolean;
-  produtos: Product[];
+export interface ShoppingList {
+  id: number;
+  user_id: number;
+  date: string;
+  market: string;
+  completed: boolean;
+  items: Product[];
 }
 
 export interface ListsByMonth {
   month: string;
-  lists: ShoppingLists[];
+  lists: ShoppingList[];
 }
 
-export interface GroupedProducts {
-  [categoria: string]: Product[];
-}
+export type GroupedProducts = {
+  [category: string]: Product[];
+};
