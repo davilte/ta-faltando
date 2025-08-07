@@ -4,6 +4,7 @@ import { Stack, useRouter } from 'expo-router';
 import { useAuthStore, useAuthInit } from "~/src/store/auth";
 import { useFonts, Caveat_400Regular, Caveat_500Medium, Caveat_600SemiBold, Caveat_700Bold } from '@expo-google-fonts/caveat';
 import * as SplashScreen from 'expo-splash-screen';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function Layout() {
   useAuthInit();
@@ -39,5 +40,9 @@ export default function Layout() {
     return null; // Render nothing while fonts are loading
   }
 
-  return <Stack />;
+  return (
+    <GestureHandlerRootView>
+      <Stack />
+    </GestureHandlerRootView>
+  );
 }
