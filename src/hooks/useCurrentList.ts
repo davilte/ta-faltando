@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { GroupedProducts } from "../types";
-import { groupProductsByCategory, checkItem } from "../services/lists/currentListService";
+import { groupProductsByCategory, checkItem, deleteItemFromCurrentList } from "../services/lists/currentListService";
 
 export default function useCurrentList() {
     const [groupedData, setGroupedData] = useState<GroupedProducts>({});
@@ -28,5 +28,15 @@ export default function useCurrentList() {
         }
     };
 
-    return { data: groupedData, loading, categories, toggleItemChecked, refetch: loadGrouped };
+    const deleteItem = async (id: number) => {
+        try {
+            await deleteItemFromCurrentList(id);
+            await loadGrouped();
+        } catch (err) {
+            console.warn("Failed to delete item:", err);
+        }
+    };
+
+
+    return { data: groupedData, loading, categories, toggleItemChecked, deleteItem, refetch: loadGrouped };
 }

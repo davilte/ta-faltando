@@ -16,10 +16,11 @@ import NotebookLine from '../components/NotebookLine';
 import useCurrentList from '../hooks/useCurrentList';
 import useProductAutocomplete from '../hooks/useProductAutocomplete';
 import { ScrollView } from "react-native";
+import SwipeToDelete from '../components/SwipeToDelete';
 
 export default function CurrentList() {
 
-    const { data: groupedData, loading, categories, toggleItemChecked, refetch } = useCurrentList();
+    const { data: groupedData, loading, categories, toggleItemChecked, deleteItem, refetch } = useCurrentList();
     const [query, setQuery] = useState("");
     const [showResults, setShowResults] = useState(false);
     const { filtered, filter } = useProductAutocomplete();
@@ -44,16 +45,18 @@ export default function CurrentList() {
                     </DoodleMarker>
                 </NotebookLine>
                 {groupedData[category].map((product: Product) => (
-                    <NotebookLine key={product.id}>
-                        <View className='flex-row items-center justify-between w-full'>
-                            <Text className='doodle-medium text-4xl'>{product.name}</Text>
-                            <DoodleCheckbox
-                                checked={product.checked}
-                                onToggle={() => toggleItemChecked(product.id)}
-                                checkmarkImage={require('~/src/assets/images/doodle-checkmark.png')}
-                            />
-                        </View>
-                    </NotebookLine>
+                    <SwipeToDelete key={product.id} onDelete={() => deleteItem(product.id)}>
+                        <NotebookLine>
+                            <View className='flex-row items-center justify-between w-full'>
+                                <Text className='doodle-medium text-4xl'>{product.name}</Text>
+                                <DoodleCheckbox
+                                    checked={product.checked}
+                                    onToggle={() => toggleItemChecked(product.id)}
+                                    checkmarkImage={require('~/src/assets/images/doodle-checkmark.png')}
+                                />
+                            </View>
+                        </NotebookLine>
+                    </SwipeToDelete>
                 ))}
 
             </View>

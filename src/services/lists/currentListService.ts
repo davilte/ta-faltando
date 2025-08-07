@@ -66,3 +66,21 @@ export const checkItem = async (id: number) => {
 
   return await response.json();
 };
+
+export const deleteItemFromCurrentList = async (productId: number) => {
+  const token = storage.getString("token");
+  const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}/lists/current/${productId}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    }
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message || "Failed to delete item");
+  }
+
+  return await response.json();
+}
